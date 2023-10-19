@@ -7,15 +7,15 @@ public class Sat {
     }
     void Postavi(int h, int m, int s) { sati=h;minute=m;sekunde=s; }
     void Sljedeci() {
-        sekunde++;
-        if (sekunde==60) { sekunde=0; minute++; }
-        if (minute==60) { minute=0; sati++; }
+        sekunde=sekunde+1;
+        if (sekunde==60) { sekunde=0; minute=minute+1; }
+        if (minute==60) { minute=0; sati=sati+1; }
         if (sati==24) sati=0;
     }
     void Prethodni() {
         sekunde--;
-        if (sekunde==-1) { sekunde=59; minute--; }
-        if (minute==-1) { minute=59; sati--; }
+        if (sekunde==-1) { sekunde=59; minute=minute-1; }
+        if (minute==-1) { minute=59; sati=sati-1; }
         if (sati==-1) sati=23;
     }
     void PomjeriZa(int pomak) {
